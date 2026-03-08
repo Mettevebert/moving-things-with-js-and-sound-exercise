@@ -27,7 +27,7 @@ function moveDodgerLeft() {
 
   // Tjek at dodgeren ikke er nået til venstre kant
   if (left > 0) {
-    dodger.style.left = `${left - 1}px`; // Flyt 1 pixel til venstre
+    dodger.style.left = `${left - 5}px`; // Flyt 5 pixels til venstre
     playSoundOnMovement();
   } else {
     playGameOverSound(); // Dodgeren har ramt venstre kant
@@ -41,7 +41,7 @@ function moveDodgerRight() {
 
   // Spillebanen er 400px bred og dodgeren er 40px bred, så maks. left = 360px
   if (left < 360) {
-    dodger.style.left = `${left + 1}px`; // Flyt 1 pixel til højre
+    dodger.style.left = `${left + 5}px`; // Flyt 5 pixels til højre
     playSoundOnMovement();
   } else {
     playGameOverSound(); // Dodgeren har ramt højre kant
@@ -56,7 +56,7 @@ function moveDodgerUp() {
 
   // Spillebanen er 400px høj og dodgeren er 20px høj, så maks. bottom = 380px
   if (bottom < 380) {
-    dodger.style.bottom = `${bottom + 1}px`; // Flyt 1 pixel op
+    dodger.style.bottom = `${bottom + 5}px`; // Flyt 5 pixels op
     playSoundOnMovement();
   } else {
     playGameOverSound(); // Dodgeren har ramt toppen
@@ -70,7 +70,7 @@ function moveDodgerDown() {
 
   // Tjek at dodgeren ikke er nået til bunden
   if (bottom > 0) {
-    dodger.style.bottom = `${bottom - 1}px`; // Flyt 1 pixel ned
+    dodger.style.bottom = `${bottom - 5}px`; // Flyt 5 pixels ned
     playSoundOnMovement();
   } else {
     playGameOverSound(); // Dodgeren har ramt bunden
