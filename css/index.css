@@ -1,20 +1,26 @@
+/* Opgave 6: Dodgeren vises med pacman-billede i stedet for farvet baggrund */
 #dodger {
-  background-color: white;
+  background-color: transparent;
+  background-image: url("../img/pacman.png"); /* Billedet ligger i img/-mappen, et niveau op fra css/ */
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 20px;
   position: absolute;
   width: 40px;
 }
 
+/* Spillebanen – sort baggrund, fast størrelse og skjuler elementer udenfor */
 #game {
   background-color: #111;
   height: 400px;
   margin: 0 auto;
-  overflow: hidden;
+  overflow: hidden;   /* Elementer der falder ud af banen forsvinder */
   position: relative;
   text-align: center;
   width: 400px;
 }
 
+/* Start-knappen vist midt i spillebanen */
 #start {
   color: white;
   font-size: 4rem;
@@ -23,6 +29,29 @@
   top: 4rem;
 }
 
+/* Opgave 8: Scoretæller øverst til venstre */
+#score {
+  color: #ffffff;
+  font-family: monospace;
+  font-size: 1rem;
+  left: 10px;
+  position: absolute;
+  top: 10px;
+}
+
+/* Game over-besked vises midt på spillebanen */
+#game-over-msg {
+  color: #ff4444;
+  font-family: monospace;
+  font-size: 1.4rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+/* Stenen – firkantet tan-farvet element der falder ned */
 .rock {
   width: 20px;
   height: 20px;
@@ -30,6 +59,7 @@
   position: absolute;
 }
 
+/* Øverste hjørne-effekt på stenen (dekorativt) */
 .rock:before {
   content: "";
   border-bottom: 6px solid tan;
@@ -42,6 +72,7 @@
   width: 9px;
 }
 
+/* Nederste hjørne-effekt på stenen (dekorativt) */
 .rock:after {
   content: "";
   border-left: 6px solid #111;

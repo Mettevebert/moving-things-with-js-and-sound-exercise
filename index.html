@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,38 @@
   <title>Rock Dodger! (Beta)</title>
   <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
+
 <body>
+
+  <!-- Opgave 4: Lydelement til bevægelseslyd -->
+  <audio id="movementSound">
+    <source src="audio/movement_sound.m4a" type="audio/mpeg">
+    Din browser understøtter ikke audio-elementet.
+  </audio>
+
+  <!-- Opgave 5: Lydelement til game over-lyd -->
+  <audio id="gameoverSound">
+    <source src="audio/gameover_sound.m4a" type="audio/mpeg">
+    Din browser understøtter ikke audio-elementet.
+  </audio>
+
+  <!-- Spillebanen -->
   <div id="game">
-    <div id="dodger" style="bottom: 0px; left: 180px;"></div>
+
+    <!-- Opgave 7: Startposition sat til midten (left: 180px = (400-40)/2) -->
+<div id="dodger" style="bottom: 0px; left: 180px;"></div>
+
+    <!-- Opgave 8: Scoretæller øverst til venstre i spillebanen -->
+    <div id="score">Point: 0</div>
+
+    <!-- Game over-besked vises når spillet er slut -->
+    <div id="game-over-msg" style="display:none;"></div>
+
+    <!-- Start-knap -->
+    <a id="start" href="#">Start</a>
+
   </div>
+
   <script type="text/javascript" src="JS/index.js"></script>
 </body>
 </html>
